@@ -1,0 +1,316 @@
+\documentclass[final,xcolor=svgnames]{beamer}
+\usetheme{RJH}
+\usepackage[orientation=portrait,size=a2,scale=1.4,debug]{beamerposter}
+%\usepackage[orientation=portrait,size=custom,width=30,height=50,scale=1,debug]{beamerposter}
+\usepackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+
+\usepackage[T1]{fontenc}
+
+\usefonttheme{professionalfonts}
+\useinnertheme[shadow]{rounded}
+%\usecolortheme{orchid}
+
+%\usepackage{arev}
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usepackage{tkz-berge}
+\usepackage{ytableau}
+%\usepackage{tkz-berge-add}
+
+\usepackage[spanish,mexico,es-nolayout]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amscd}
+\DeclareMathOperator{\sgn}{sgn}
+
+\title{%\fontfamily{ptm}\fontseries{b}\fontsize{78}{80}\selectfont
+  Representaciones en homologías}
+\author{%\fontfamily{ppl}\fontseries{b}\fontsize{68}{70}\selectfont
+  Briseida Trejo Escamilla}
+\footer{\texttt{btbrisi@hotmail.com}}
+\date{}
+
+\begin{document}
+\begin{frame}{}
+  \begin{block}{Resumen}
+    \renewcommand{\VertexLineWidth}{3pt}
+    \renewcommand{\EdgeLineWidth}{3pt}
+    \centering
+    \begin{minipage}{0.15\linewidth}
+      \begin{tikzpicture}[rotate=90]
+        \GraphInit[vstyle=Hasse]
+        \grPetersen[RA=2,RB=1]
+      \end{tikzpicture}
+    \end{minipage}
+    \begin{minipage}{0.6\linewidth}
+      \centering
+      %\fontfamily{ptm}\fontseries{b}\fontsize{48}{50}\selectfont
+      \begin{scriptsize}
+        Se discute la relación entre tableros de Young y representaciones del
+        grupo simétrico $S_{n}$. Describimos la construcción de módulos de Specht los
+        cuales son representaciones irreducibles de $S_{n}$. blah blah...........
+      \end{scriptsize}
+    \end{minipage}
+    \begin{minipage}{0.15\linewidth}
+      \begin{tikzpicture}%[rotate=90]
+        \GraphInit[vstyle=Hasse]
+        %\grPrism[RA=2,RB=1]{5}
+        \grEmptyCycle[RA=0.7,rotation=-90]{5}
+        \grEmptyCycle[RA=1.8,prefix=w,rotation=-90]{5}
+        \grCycle[RA=2.8,prefix=z,rotation=90]{5}
+        \EdgeInGraphMod{a}{5}{2}
+        \EdgeMod{a}{w}{5}{1}
+        \EdgeMod{a}{w}{5}{-1}
+        \EdgeMod{w}{z}{5}{2}
+        \EdgeMod{w}{z}{5}{-2}    
+      \end{tikzpicture}
+    \end{minipage}
+  \end{block}
+
+  \vfill
+  
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \centering
+      \begin{block}{Representaciones de grupos}
+        \begin{scriptsize}
+          \begin{itemize}         
+          \item La \textit{representación trivial} de $S_{3}$ es el homomorfismo
+          $\rho:S_{3}\rightarrow \mathbb{C^{*}}$ dado por $\rho(g)=1$ para todo
+          $g\in S_{3}$.
+          
+        \item Si $\pi=\tau_{1}\tau_{2}\cdots\tau_{k}$, donde $\tau_{i}$ son
+          transposiciones, definimos la  \textit{función signo}
+          $\sgn:\mathcal{S}_{n} \rightarrow\{\pm1\}$
+          mediante $$\sgn(\pi):=(-1)^{k}.$$
+          Con acción:
+          \begin{center}
+          $\sigma x=$
+          \left\{
+            \begin{array}{rl}
+              x  & \mbox{ si $\sigma$ es par}, \\
+              -x & \mbox{ si $\sigma$ es impar}, 
+            \end{array}\right
+          \end{center}
+
+          para $\sigma \in S_{n}$, $x\in \mathbb{C}$. Esta representación de $S_{n}$ se
+          llama \textit{representación signo.} 
+        \item  Sea $E=\left\{(x_{1},x_{2},x_{3})\in
+            \mathbb{C}^{3} \mid x_{1}+x_{2}+x_{3}=0\}\right$, con
+          acción $\sigma(x_{1},x_{2},x_{3})=(x_{\sigma(1)},x_{\sigma(2)},x_{\sigma(3)})$,
+          esta es la \textit{representación estándar}
+        \item  Las representaciones irreducibles de un grupo finito
+          están en correspondencia biyectiva con las clases de
+          conjugación de sus elementos.
+        \end{itemize}
+      \end{scriptsize}
+    \end{block}
+
+      \begin{block}{Grupo simétrico $S_{n}$}
+        \begin{scriptsize}
+          \begin{itemize}
+            \item $(123)(45)\in S_{5}$ tiene la  \textit{estructura cíclica} $(3,2)$. 
+            \item Dos elementos de $S_{n}$ están conjugados si y solo tienen la misma
+          estructura cíclica.
+          \end{itemize}
+        \end{scriptsize}
+      \end{block}
+
+      \begin{block}{Partición y Diagramas}
+        \begin{scriptsize}
+           El número $3$ tiene tres particiones:
+           \ytableausetup{mathmode, boxsize=1em}
+           \begin{center}
+             \begin{array}{cccc}
+              \mbox{Clases de conjugación}&  &\lambda &  \mbox{Diagrama} \\
+               (1)        &  3=1+1+1  &  (1,1,1) & \ydiagram{1,1,1} \quad\\
+               \\(12)     &  3=2+1    &   (2,1) &\ydiagram{2,1} \\
+               \\(123)    &   3=3      &   (3)  &\ydiagram{3}
+             \end{array}
+             \end{center}
+           \end{scriptsize}
+         \end{block}
+     
+      \begin{block}{$\lambda$-tablero}
+        \begin{scriptsize}
+          Estos son todos los tableros correspondientes a la
+          partición $\lambda=(2,1)$:
+          \begin{center}
+            \begin{ytableau}
+              1 & 2\\
+              3
+            \end{ytableau} \quad
+            \begin{ytableau}
+              2 & 1\\
+              3
+            \end{ytableau}\quad
+            \begin{ytableau}
+              1 & 3\\
+              2
+            \end{ytableau}\quad
+            \begin{ytableau}
+              3 & 1\\
+              2
+            \end{ytableau}\quad
+            \begin{ytableau}
+              2 & 3\\
+              1
+            \end{ytableau}\quad
+            \begin{ytableau}
+              3 & 2\\
+              1
+            \end{ytableau}
+          \end{center}
+        \end{scriptsize}
+      \end{block}
+
+      \begin{block}{Acción de $S_{n}$ en los tableros}
+        \begin{scriptsize}
+          \begin{center}(23)
+            \ytableausetup{mathmode, boxsize=1em}
+            \begin{ytableau}
+                1 & 2  \\
+                3 \\
+              \end{ytableau}
+              =
+              \begin{ytableau}
+                1 & 3  \\
+                2 \\
+              \end{ytableau}
+            \end{center}
+          \end{scriptsize}
+      \end{block}
+
+      \begin{block}{Grupo columna $C_{t}$}
+        \begin{scriptsize}
+          \begin{center}$t=$
+            \ytableausetup{mathmode,boxsize=1em}  
+            \begin{ytableau}
+              4 & 1 & 2\\
+              3 & 5
+            \end{ytableau}\quad
+            $C_{t}=S_{\{3,4\}}\times S_{\{1,5\}}\times S_{\{2\}}$
+          \end{center}
+        \end{scriptsize}
+      \end{block}
+
+      \begin{block}{Politabloides}
+        \begin{scriptsize}
+          Si $t$ es un tablero, entonces el \textit{politabloide} asociado es
+          $$e_{t}=\sum_{\pi\in C_{t}}\sgn(\pi)\pi\{t\}.$$
+          \begin{center} Ejemplo:\quad $t=$
+            \ytableausetup{mathmode, boxsize=1em}
+            \begin{ytableau}
+              1 & 2 \\
+              3
+            \end{ytableau}\quad
+            $e_{t}=$
+            \ytableausetup{mathmode, boxsize=1em,tabloids}
+            \ytableaushort{12,3}
+            $-$ \ytableaushort{32,1}
+          \end{center}
+        \end{scriptsize}
+      \end{block}     
+    \end{column}
+
+    \begin{column}{0.5\textwidth}
+ %\begin{block}{Lema}
+       % \begin{scriptsize}
+        %  Sea $t$ un tablero y $\pi$ una permutación. Entonces $e_{\pi t}=\pi e_{t}$.
+         %\end{scriptsize}
+      %\end{block}
+      \begin{block}{Módulo de Specht $S^{\lambda}$}
+        \begin{scriptsize}
+          Para cualquier partición $\lambda$, el correspondiente
+          \textit{módulo de Specht}, denotado $S^{\lambda}$, es el
+          módulo generado por los politabloides $e_{t}$, donde $t$ es tomado sobre todos los tableros de forma $\lambda$.
+        \end{scriptsize}
+      \end{block}
+
+      \begin{block}{Ejemplo}
+        \begin{scriptsize}
+            Considere $\lambda=(3)$. Hay un único politablide, es decir,
+            \begin{center}
+              \ytableausetup{mathmode, boxsize=1em,tabloids}    
+              \ytableaushort{123} 
+            \end{center}
+            El politabloide está fijo por $S_{3}$, así que $S^{(3)}$ es la
+            \textit{representación trivial}.
+        
+            Sea $\lambda=(1^{3})=(1,1,1)$. Sea
+            \begin{center}$t=$
+              \ytableausetup{mathmode, boxsize=1.5em,notabloids}
+              \begin{ytableau}
+                1\\
+                2\\
+                3
+              \end{ytableau}
+            \end{center}
+            Para cualquier $\lambda$-tablero $t^{'}$,
+            $e_{t}=e_{t^{'}}$ si $t^{'}$ es obtenida de $t$ mediante
+            una permutación par, o $e_{t}=-e_{t^{'}}$ su $t^{'}$ es
+            obtenida de $t$ mediante una permutación impar. Tenemos $\pi
+            e_{t}=e_{\pi t}=\sgn(\pi)e_{t}$. Así que $S^{(1^{3})}$ es la
+            \textit{representación signo}.
+         
+         Ahora sea $\lambda=(2,1)$, $\{t_{i}\}$ denota el $\lambda$-tabloide
+         con $i$ en el segundo renglón, vemos que los politabloides tienen la
+         forma  $\{t_{i}\}- \{t_{j}\}$. En efecto, el politabloide construido
+         de el tablero
+         \begin{center}$t=$
+           \ytableausetup{mathmode, boxsize=1.5em,notabloids}
+           \begin{ytableau}
+             j & a & b \\
+             i\\
+           \end{ytableau}
+         \end{center}
+         es igual a $\{t_{i}\}- \{t_{j}\}$. Usemos temporalmente
+         $\boldsymbol{e_{i}}$ para denotar el tabloide $\{t_{i}\}$. Entonces
+         $S^{\lambda}$ es generado por los elementos de la forma
+         $\boldsymbol{e_{i}}-\boldsymbol{e_{j}}$, y se sigue que
+         $$S^{(2,1)}=\{c_{1}\boldsymbol{e_{1}}+c_{2}\boldsymbol{e_{2}}+c_{3}\boldsymbol{e_{3}}|c_{1}+c_{2}+c_{3}\}$$ 
+         Esta es la representación es \textit{representación estándar}. 
+       \end{scriptsize}
+     \end{block}
+
+     \begin{block}{Teorema}
+       \begin{scriptsize}         
+         Los módulos de Specht $S^{\lambda}$ para $\lambda\vdash n$ forman
+         una lista completa de representaciones irreducibles de $S_{n}$ sobre $\mathbb{C}$
+        \end{scriptsize}
+      \end{block}
+
+      \begin{block}{Bouc}
+        \begin{scriptsize}
+          Para todo $n\geq1$ y $k\in \mathbb{Z}$,
+          \begin{equation*}
+            % \label{eq:6}
+            \widetilde H_{k-1}(M_{n})\cong_{S_{n}}\bigoplus_{\lambda:\lambda\vdash n\\
+              \lambda=\lambda^{'}\\r(\lambda)=\mid \lambda \mid-2k} S^{\lambda}.
+          \end{equation*}
+          sobre los $\lambda$'s diagramas de Young estándar para $\lambda^{'}$
+          el auto-conjugado de $\lambda$ y rango $n-2k$ (el cual puede ser
+          obtenido de la fórmula de Hook-length).
+        \end{scriptsize}
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \vfill
+
+  \begin{block}{Blah blah}
+    \begin{tiny}
+    \[
+    \begin{CD}
+      C_{2}(M_{6}) @>{\partial_{2}}>> C_{1}(M_{6}) @>{\partial_{1}}>> C_{0}(M_{6}) @>{\varepsilon}>> \mathbb{C}\\
+      @VVV   @VVV   @VVV   @VVV    \\
+      S^{(4,1,1)}\oplus S^{(3,3)} @>{\widehat\partial_{2}}>>
+      S^{(5,1)}\oplus S^{(4,1,1)}\oplus S^{(4,2)}\oplus S^{(3,3)}\oplus S^{(3,2,1)} @>{\widehat\partial_{1}}>> 
+      \mathbb{C} \oplus S^{(5,1)}\oplus S^{(4,2)} @>{\widehat \varepsilon}>>  \mathbb{C}
+    \end{CD}
+    \]
+    \end{tiny}
+  \end{block}
+\end{frame}
+\end{document}
