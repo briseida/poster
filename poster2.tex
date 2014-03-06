@@ -1,7 +1,6 @@
 \documentclass[final,xcolor=svgnames]{beamer}
 \usetheme{RJH}
 \usepackage[orientation=portrait,size=a2,scale=1.4,debug]{beamerposter}
-%\usepackage[orientation=portrait,size=custom,width=30,height=50,scale=1,debug]{beamerposter}
 \usepackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
@@ -10,45 +9,42 @@
 
 \usefonttheme{professionalfonts}
 \useinnertheme[shadow]{rounded}
-%\usecolortheme{orchid}
 
-%\usepackage{arev}
 \usepackage{tikz}
 \usepackage{tkz-graph}
 \usepackage{tkz-berge}
 \usepackage{ytableau}
-%\usepackage{tkz-berge-add}
+
+\renewcommand{\VertexLineWidth}{2pt}
+\renewcommand{\VertexSmallMinSize}{8pt}
+\renewcommand{\EdgeLineWidth}{2pt}
+\GraphInit[vstyle=Hasse]
+
 
 \usepackage[spanish,mexico,es-nolayout]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amscd}
 \DeclareMathOperator{\sgn}{sgn}
 
-\title{%\fontfamily{ptm}\fontseries{b}\fontsize{78}{80}\selectfont
+\title{\Huge
     Representaciones en homologías}
-\author{%\fontfamily{ppl}\fontseries{b}\fontsize{68}{70}\selectfont
-  Briseida Trejo Escamilla}
+\author{%
+  Briseida Trejo Escamilla\\[15pt]
+  \textsl{XXIX Coloquio Víctor Neumann-Lara de Teoría de las Gráficas, Combinatoria y sus Aplicaciones}}
 \footer{\texttt{btbrisi@hotmail.com}}
-\date{}
 
 \begin{document}
 \begin{frame}{}
   \begin{block}{Resumen}
-    \renewcommand{\VertexLineWidth}{3pt}
-    \renewcommand{\EdgeLineWidth}{3pt}
-    %\centering
     \begin{minipage}{0.15\linewidth}
+      \centering
       \begin{tikzpicture}[rotate=90]
-        \GraphInit[vstyle=Hasse]
         \grPetersen[RA=2,RB=1]
       \end{tikzpicture}
+
+      $G_{5}$
     \end{minipage}
-    \begin{minipage}{0.6\linewidth}
-      %\centering
-      %\justifying 
-      %\fontfamily{ptm}\fontseries{b}\fontsize{48}{50}\selectfont
-      %\begin{scriptsize}
-      %\raggedright{
+    \begin{minipage}{0.691\linewidth}
       El presente trabajo tiene como objetivo analizar la estructura de
       la homología de complejos simpliciales construidos a partir de una
       gráfica simple finita en donde actúa el grupo simétrico $S_{n}$.
@@ -56,32 +52,28 @@
       Se define la gráfica $M(G)$ de emparejamientos de la gráfica simple
       $G$ como la gráfica cuyos vértices son las aristas de $G$ y dos
       vértices son adyacentes si las correspondientes aristas son ajenas. En
-      la gráfica $G_{n}=M(K_{n})$, el grupo $S_{n}$ actúa de manera natural, por
+      la gráfica $G_{n}=M(K_{n})$, el grupo~$S_{n}$ actúa de manera natural, por
       lo que sus homologías con coeficientes complejos definen
       representaciones de $S_{n}$. 
       
       La descomposición en irreducibles de tales homologías ha sido exhibida
       por Bouc (1992). Se muestra el resultado correspondiente para la gráfica de clanes $K(G_{6})$.
-
-      
-        %Se discute la relación entre tableros de Young y representaciones del
-        %grupo simétrico $S_{n}$. Describimos la construcción de módulos de Specht los
-        %cuales son representaciones irreducibles de $S_{n}$. blah blah...........
-      %\end{scriptsize}
     \end{minipage}
     \begin{minipage}{0.15\linewidth}
-      \begin{tikzpicture}%[rotate=90]
-        \GraphInit[vstyle=Hasse]
-        %\grPrism[RA=2,RB=1]{5}
-        \grEmptyCycle[RA=0.7,rotation=-90]{5}
-        \grEmptyCycle[RA=1.8,prefix=w,rotation=-90]{5}
-        \grCycle[RA=2.8,prefix=z,rotation=90]{5}
+      \centering
+      \begin{tikzpicture}
+%        \GraphInit[vstyle=Hasse]
+        \grEmptyCycle[RA=0.4,rotation=-90]{5}
+        \grEmptyCycle[RA=1.2,prefix=w,rotation=-90]{5}
+        \grCycle[RA=2,prefix=z,rotation=90]{5}
         \EdgeInGraphMod{a}{5}{2}
         \EdgeMod{a}{w}{5}{1}
         \EdgeMod{a}{w}{5}{-1}
         \EdgeMod{w}{z}{5}{2}
         \EdgeMod{w}{z}{5}{-2}    
       \end{tikzpicture}
+
+      $K(G_{5})$
     \end{minipage}
   \end{block}
 
