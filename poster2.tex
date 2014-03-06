@@ -243,51 +243,49 @@
          %\end{scriptsize}
       %\end{block}
       
-      \begin{block}{Ejemplo}
-      %  \begin{scriptsize}
-            Considere $\lambda=(3)$. Hay un único politablide, es decir,
-            \begin{center}
-              \ytableausetup{mathmode, boxsize=1em,tabloids}    
-              \ytableaushort{123} 
-            \end{center}
-            El politabloide está fijo por $S_{3}$, así que $S^{(3)}$ es la
-            \textit{representación trivial}.
+      % \begin{block}{Ejemplo}
+      %   Considere $\lambda=(3)$. Hay un único politablide, es decir,
+      %   \begin{center}
+      %     \ytableausetup{mathmode, boxsize=1em,tabloids}    
+      %     \ytableaushort{123} 
+      %   \end{center}
+      %   El politabloide está fijo por $S_{3}$, así que $S^{(3)}$ es la
+      %   \textit{representación trivial}.
         
-            Sea $\lambda=(1^{3})=(1,1,1)$. Sea
-            \begin{center}$t=$
-              \ytableausetup{mathmode, boxsize=1.5em,notabloids}
-              \begin{ytableau}
-                1\\
-                2\\
-                3
-              \end{ytableau}
-            \end{center}
-            Para cualquier $\lambda$-tablero $t^{'}$,
-            $e_{t}=e_{t^{'}}$ si $t^{'}$ es obtenida de $t$ mediante
-            una permutación par, o $e_{t}=-e_{t^{'}}$ su $t^{'}$ es
-            obtenida de $t$ mediante una permutación impar. Tenemos $\pi
-            e_{t}=e_{\pi t}=\sgn(\pi)e_{t}$. Así que $S^{(1^{3})}$ es la
-            \textit{representación signo}.
-         
-         Ahora sea $\lambda=(2,1)$, $\{t_{i}\}$ denota el $\lambda$-tabloide
-         con $i$ en el segundo renglón, vemos que los politabloides tienen la
-         forma  $\{t_{i}\}- \{t_{j}\}$. En efecto, el politabloide construido
-         de el tablero
-         \begin{center}$t=$
-           \ytableausetup{mathmode, boxsize=1.5em,notabloids}
-           \begin{ytableau}
-             j & a \\
-             i\\
-           \end{ytableau}
-         \end{center}
-         es igual a $\{t_{i}\}- \{t_{j}\}$. Usemos temporalmente
-         $\boldsymbol{e_{i}}$ para denotar el tabloide $\{t_{i}\}$. Entonces
-         $S^{\lambda}$ es generado por los elementos de la forma
-         $\boldsymbol{e_{i}}-\boldsymbol{e_{j}}$, y se sigue que
-         $$S^{(2,1)}=\{c_{1}\boldsymbol{e_{1}}+c_{2}\boldsymbol{e_{2}}+c_{3}\boldsymbol{e_{3}}|c_{1}+c_{2}+c_{3}\}$$ 
-         Esta es la \textit{representación estándar}. 
-     %  \end{scriptsize}
-     \end{block}
+      %   Sea $\lambda=(1^{3})=(1,1,1)$. Sea
+      %   \begin{center}$t=$
+      %     \ytableausetup{mathmode, boxsize=1.5em,notabloids}
+      %     \begin{ytableau}
+      %       1\\
+      %       2\\
+      %       3
+      %     \end{ytableau}
+      %   \end{center}
+      %   Para cualquier $\lambda$-tablero $t^{'}$,
+      %   $e_{t}=e_{t^{'}}$ si $t^{'}$ es obtenida de $t$ mediante
+      %   una permutación par, o $e_{t}=-e_{t^{'}}$ su $t^{'}$ es
+      %   obtenida de $t$ mediante una permutación impar. Tenemos $\pi
+      %   e_{t}=e_{\pi t}=\sgn(\pi)e_{t}$. Así que $S^{(1^{3})}$ es la
+      %   \textit{representación signo}.
+        
+      %    Ahora sea $\lambda=(2,1)$, $\{t_{i}\}$ denota el $\lambda$-tabloide
+      %    con $i$ en el segundo renglón, vemos que los politabloides tienen la
+      %    forma  $\{t_{i}\}- \{t_{j}\}$. En efecto, el politabloide construido
+      %    de el tablero
+      %    \begin{center}$t=$
+      %      \ytableausetup{mathmode, boxsize=1.5em,notabloids}
+      %      \begin{ytableau}
+      %        j & a \\
+      %        i\\
+      %      \end{ytableau}
+      %    \end{center}
+      %    es igual a $\{t_{i}\}- \{t_{j}\}$. Usemos temporalmente
+      %    $\boldsymbol{e_{i}}$ para denotar el tabloide $\{t_{i}\}$. Entonces
+      %    $S^{\lambda}$ es generado por los elementos de la forma
+      %    $\boldsymbol{e_{i}}-\boldsymbol{e_{j}}$, y se sigue que
+      %    $$S^{(2,1)}=\{c_{1}\boldsymbol{e_{1}}+c_{2}\boldsymbol{e_{2}}+c_{3}\boldsymbol{e_{3}}|c_{1}+c_{2}+c_{3}\}$$ 
+      %    Esta es la \textit{representación estándar}. 
+      %  \end{block}
 
      \begin{block}{Teorema}
      %  \begin{scriptsize}         
@@ -297,12 +295,11 @@
       \end{block}
 
       \begin{block}{Gráfica de emparejamiento}
-        Se define la gráfica $M(G)$ de emparejamientos de la gráfica
+        Se define la \emph{gráfica $M(G)$ de emparejamiento} de la gráfica
         simple $G$ como la gráfica cuyos vértices son las aristas de
         $G$ y dos vértices son adyacentes si las correspondientes
-        aristas son ajenas. %Tenemos especial interes en la gráficas
-                            %$G_{n}=M(K_{n})$, donde $K_{n}$ es una
-                            %gráfica completa de $n$ vértices.
+        aristas son ajenas. Tenemos especial interés en la gráficas
+        $G_{n}=M(K_{n})$, donde $K_{n}$ es una gráfica completa de $n$ vértices.
       \end{block}
 
 
@@ -314,40 +311,73 @@
         \end{itemize}
 
       \end{block}
+      
+      \begin{block}{Ejemplo}
+        \begin{minipage}{0.3\linewidth} 
+          \centering
+          \begin{tikzpicture}
+            \draw[help lines] (-2,0);% grid (0,2);
+            \GraphInit[vstyle=Classic]
+            \Vertex[x=-2,y=0,Math,LabelOut,Lpos=180]{2}
+            \Vertex[x=0,y=0,Math]{3}
+            \Vertex[x=-2,y=2,Math,LabelOut,Lpos=180]{1}
+            \Vertex[x=0,y=2,Math]{4}
+            \Edge(1)(2)
+            \Edge(1)(3)
+            \Edge(1)(4)
+            \Edge(2)(3)
+            \Edge(2)(4)
+            \Edge(3)(4)
+          \end{tikzpicture}
+          
+          $K_{4}$
+        \end{minipage}
+        \begin{minipage}{0.3\linewidth}    
+          \centering
+          \begin{tikzpicture}
+              \draw[help lines] (-2,0);% grid (0,2);
+              \GraphInit[vstyle=Classic]
+              \Vertex[x=-2,y=2,Math,LabelOut,Lpos=90]{12}
+              \Vertex[x=-2,y=0,Math,LabelOut,Lpos=-90]{34}
+              \Vertex[x=-1,y=0,Math,LabelOut,Lpos=-90]{24}
+              \Vertex[x=-1,y=2,Math,LabelOut,Lpos=90]{13}
+              \Vertex[x=0,y=2,Math,LabelOut,Lpos=90]{14}
+              \Vertex[x=0,y=0,Math,LabelOut,Lpos=-90]{23}
+              \Edge(12)(34)
+              \Edge(24)(13)
+              \Edge(14)(23)        
+            \end{tikzpicture}
+
+            $G_{4}$
+          \end{minipage}
+        \begin{minipage}{0.3\linewidth}    
+          \centering
+            \begin{tikzpicture}
+              \draw[help lines] (-2,0);% grid (2,0);
+              \GraphInit[vstyle=Classic]
+              %       % \SetVertexMath
+              \Vertex[x=-2,y=0,Math,LabelOut,Lpos=-90]{12,34}
+              \Vertex[x=0, y=0,Math,LabelOut,Lpos=-90]{24,13}
+              \Vertex[x=2, y=0,Math,LabelOut,Lpos=-90]{14,23} 
+            \end{tikzpicture}
+
+            $K(G_{4})$
+                  \end{minipage}
+      \end{block}
 
       \begin{block}{Bouc}
-     %   \begin{scriptsize}
           Para todo $n\geq1$ y $k\in \mathbb{Z}$,
           \begin{equation*}
             % \label{eq:6}
-            \widetilde H_{k-1}(M_{n})\cong_{S_{n}}\bigoplus_{\substack{\lambda:\lambda\vdash n\\
-              \lambda=\lambda^{'}\\r(\lambda)=\mid \lambda \mid-2k}} S^{\lambda}.
+            \widetilde H_{k-1}(M_{n};\mathbb{C})\cong_{S_{n}}\bigoplus_{\substack{\lambda:\lambda\vdash n\\
+              \lambda=\lambda^{'}\\d(\lambda)=n-2k}} S^{\lambda}.
           \end{equation*}
-          sobre los $\lambda$'s diagramas de Young estándar para $\lambda^{'}$
-          el auto-conjugado de $\lambda$ y rango $n-2k$ (el cual puede ser
-          obtenido de la fórmula de Hook-length).
-     %   \end{scriptsize}
+          donde $\lambda^{'}$ denota el auto-conjugado de $\lambda$ y
+          $d(\lambda)$ es el número de cajas en la diagonal de el $\lambda$-tablero.
+ 
       \end{block}
-    \end{column}
-  \end{columns}
-
-  \begin{block}{Gráficas de Emparejamiento y de Clanes.}
-    \begin{minipage}{0.15\linewidth}    
-     \begin{tikzpicture}
-          \draw[help lines] (-2,0);% grid (0,2);
-          \GraphInit[vstyle=Classic]
-          \Vertex[x=-2,y=0,Math,LabelOut,Lpos=180]{2}
-          \Vertex[x=0,y=0,Math]{3}
-          \Vertex[x=-2,y=2,Math,LabelOut,Lpos=180]{1}
-          \Vertex[x=0,y=2,Math]{4}
-          \Edge(1)(2)
-          \Edge(1)(3)
-          \Edge(1)(4)
-          \Edge(2)(3)
-          \Edge(2)(4)
-          \Edge(3)(4)
-        \end{tikzpicture}$K_{4}$
-      \end{minipage}
+      
+\begin{block}{Gráficas de Emparejamiento y de Clanes.}
   %\begin{minipage}{0.15\linewidth}    
      %   \begin{center}
      %     \begin{tikzpicture}
@@ -356,14 +386,7 @@
      %       \grComplete[RA=2]{5}
      %     \end{tikzpicture}
      %   \end{center}
-     % \end{minipage}
-      \begin{minipage}{0.15\linewidth}
-        \begin{tikzpicture}[rotate=90]
-          \GraphInit[vstyle=Classic]
-          \SetVertexNoLabel
-          \grPetersen[RA=2,RB=1]
-        \end{tikzpicture}
-      \end{minipage}
+     % \end{minipage}     
       \begin{minipage}{0.15\linewidth}    
         \begin{center}
           \begin{tikzpicture}
@@ -392,55 +415,10 @@
           \end{tikzpicture}
         \end{center}
       \end{minipage}
-
-    \begin{minipage}{0.15\linewidth}    
-      \begin{center}
-        \begin{tikzpicture}
-          \draw[help lines] (-2,0);% grid (0,2);
-          \GraphInit[vstyle=Classic]
-          \Vertex[x=-2,y=2,Math,LabelOut,Lpos=90]{12}
-          \Vertex[x=-2,y=0,Math,LabelOut,Lpos=-90]{34}
-          \Vertex[x=-1,y=0,Math,LabelOut,Lpos=-90]{24}
-          \Vertex[x=-1,y=2,Math,LabelOut,Lpos=90]{13}
-          \Vertex[x=0,y=2,Math,LabelOut,Lpos=90]{14}
-          \Vertex[x=0,y=0,Math,LabelOut,Lpos=-90]{23}
-          \Edge(12)(34)
-          \Edge(24)(13)
-          \Edge(14)(23)        
-        \end{tikzpicture}
-        $G_{4}$
-      \end{center}
-    \end{minipage}
-    \begin{minipage}{0.15\linewidth}
-      \begin{tikzpicture}%[rotate=90]
-        \GraphInit[vstyle=Classic]
-        \SetVertexNoLabel
-        \grEmptyCycle[RA=0.7,rotation=-90]{5}
-        \grEmptyCycle[RA=1.8,prefix=w,rotation=-90]{5}
-        \grCycle[RA=2.8,prefix=z,rotation=90]{5}
-        \EdgeInGraphMod{a}{5}{2}
-        \EdgeMod{a}{w}{5}{1}
-        \EdgeMod{a}{w}{5}{-1}
-        \EdgeMod{w}{z}{5}{2}
-        \EdgeMod{w}{z}{5}{-2}    
-      \end{tikzpicture}
-    \end{minipage}
-
-     \begin{minipage}{0.15\linewidth}    
-      \begin{center}
-         \begin{tikzpicture}
-           \draw[help lines] (-2,0);% grid (2,0);
-           \GraphInit[vstyle=Classic]
-    %       %\SetVertexMath
-           \Vertex[x=-2,y=0,Math,LabelOut,Lpos=-90]{12,34}
-           \Vertex[x=0, y=0,Math,LabelOut,Lpos=-90]{24,13}
-           \Vertex[x=2, y=0,Math,LabelOut,Lpos=-90]{14,23} 
-         \end{tikzpicture}
-         $K(G_{4})$
-       \end{center}
-     \end{minipage}
-     
   \end{block}
+
+    \end{column}
+  \end{columns}
 
   \vfill
 
