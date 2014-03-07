@@ -408,20 +408,32 @@
                   \end{minipage}
       \end{block}
 
-      \begin{block}{Diagrama auto-conjugado}
-        Sea $\lambda=(4,2,1)$, el \alert{auto-conjugado de $\lambda$} 
-        es $\lambda^{'}=(3,2,1,1)$
-        \begin{center}
+      \begin{block}{Conjugado}
+        Sea $\lambda=(4,2,1)$, el \alert{conjugado de $\lambda$} 
+        es $\lambda^{'}=(3,2,1,1)$ (pues .....)
+        \begin{equation*}
           \ytableausetup{notabloids} 
-          $\lambda=$\ydiagram{4,2,1} \quad
-          $\lambda^{'}=$\ydiagram{3,2,1,1}
-        \end{center}
+          \lambda=\ydiagram{4,2,1} \quad
+          \lambda^{'}=\ydiagram{3,2,1,1}
+        \end{equation*}
         $d(\lambda)$ es el número de cajas en la diagonal de el
         $\lambda$-tablero. En este caso $d(\lambda)=2$.
       \end{block}
 
-      \begin{block}{Bouc}
-          Para todo $n\geq1$ y $k\in \mathbb{Z}$,
+      \begin{block}{Complejo simplicial}
+        A cada gráfica $G$ se le asocia un espacio topológico por
+        medio del complejo simplicial $\Delta(G)$ cuyos simplejos son
+        las subgráficas completas. En adelante, la homología reducida
+        de $\Delta(G)$ se denotará simplemente como $\widetilde
+        H(G;\mathbb{C})$. Si $G$ tiene una acción del grupo simétrico
+        $S_{n}$, entonces las homologías de $G$ son representaciones
+        de $S_{n}$.
+      \end{block}
+
+      \begin{block}{Teorema de Bouc}
+        La descomposición en irreducibles del $S_{n}$-módulo
+        $\widetilde H_{k-1}(G_{n};\mathbb{C})$ fue dada por Bouc. Para
+        todo $n\geq1$ y $k\in \mathbb{Z}$,
           \begin{equation*}
             % \label{eq:6}
             \widetilde H_{k-1}(G_{n};\mathbb{C})\cong_{S_{n}}\bigoplus_{\substack{\lambda:\lambda\vdash n\\
