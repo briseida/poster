@@ -85,12 +85,12 @@
     %   \begin{block}{Representaciones de grupos}
     %     \begin{scriptsize}
     %       \begin{itemize}         
-    %       \item La \textit{representación trivial} de $S_{3}$ es el homomorfismo
+    %       \item La \alert{representación trivial} de $S_{3}$ es el homomorfismo
     %       $\rho:S_{3}\rightarrow \mathbb{C^{*}}$ dado por $\rho(g)=1$ para todo
     %       $g\in S_{3}$.
           
         % \item Si $\pi=\tau_{1}\tau_{2}\cdots\tau_{k}$, donde $\tau_{i}$ son
-        %   transposiciones, definimos la  \textit{función signo}
+        %   transposiciones, definimos la  \alert{función signo}
         %   $\sgn:\mathcal{S}_{n} \rightarrow\{\pm1\}$
         %   mediante $$\sgn(\pi):=(-1)^{k}.$$
         %   Con acción:
@@ -107,11 +107,11 @@
 
 
     %       Para $\sigma \in S_{n}$, $x\in \mathbb{C}$. Esta representación de $S_{n}$ se
-    %       llama \textit{representación signo.} 
+    %       llama \alert{representación signo.} 
     %     \item  Sea $E=\left\{(x_{1},x_{2},x_{3})\in
     %         \mathbb{C}^{3} \mid x_{1}+x_{2}+x_{3}=0\}\right$, con
     %       acción $\sigma(x_{1},x_{2},x_{3})=(x_{\sigma(1)},x_{\sigma(2)},x_{\sigma(3)})$,
-    %       esta es la \textit{representación estándar}
+    %       esta es la \alert{representación estándar}
     %     \item  Las representaciones irreducibles de un grupo finito
     %       están en correspondencia biyectiva con las clases de
     %       conjugación de sus elementos.
@@ -121,7 +121,7 @@
 
       % \begin{block}{Grupo simétrico $S_{n}$}
       %   \begin{itemize}
-      %   \item $(123)(45)\in S_{5}$ tiene la  \textit{estructura cíclica} $(3,2)$. 
+      %   \item $(123)(45)\in S_{5}$ tiene la  \alert{estructura cíclica} $(3,2)$. 
       %   \item Dos elementos de $S_{n}$ están conjugados si y solo tienen la misma
       %     estructura cíclica.
       %   \end{itemize}
@@ -129,34 +129,45 @@
       \begin{block}{Representaciones de grupos.}
         \begin{itemize}
           \item Si $G$ es un grupo y $V$ es un espacio vectorial sobre
-            $\mathbb{C}$, una \textit{representación lineal} de $G$ en
-            $V$ es un homomorfismo $\rho:G\rightarrow GL(V).$
+            $\mathbb{C}$, una \alert{representación lineal} de $G$ en
+            $V$ es un homomorfismo $\rho\colon G\rightarrow GL(V).$
           \item Una representación de $G$ en $V$ da origen a una
-            acción lineal de $G$ en $V$, decimos que $V$ es \emph{$G$-módulo.}  
-         \item Un \emph{submódulo} de un $G$-módulo $V$ es un
-           subespacio vectorial $U$ de $V$ tal que $gu \in U$ para todo $g\in G$ y $u\in U$.
-          \item $V$ es \emph{irreducible} si los únicos submódulos de
+            acción lineal de $G$ en $V$. En tal caso, decimos que $V$ es \alert{$G$-módulo.}  
+         \item Un \alert{submódulo} de un $G$-módulo $V$ es un
+           subespacio $U$ de $V$ tal que $gu \in U$ para todo $g\in G$ y $u\in U$.
+          \item $V$ es \alert{irreducible} si los únicos submódulos de
             $V$ son $0$ y $V$.
         \end{itemize}
       \end{block}
 
       \begin{block}{Partición y Diagramas}
-        El número $3$ tiene tres particiones:
-        \ytableausetup{mathmode, boxsize=1em}
-        \begin{center}
+        \begin{minipage}{0.48\linewidth}
+          Una partición de $n$ es:
+
+          A cada partición le corresponde un \alert{diagrama de
+            Young}, el cual es:
+          
+          El número $3$ tiene tres particiones:
+        \end{minipage}
+        \begin{minipage}{0.48\linewidth}
+          \ytableausetup{mathmode, boxsize=1em}
+          % \begin{center}
           \begin{equation*}
             \begin{array}{cccc}
-                        & \lambda  &\mbox{Diagrama} \\ % \mbox{Clases de conjugación}&
+              & \lambda  &\mbox{Diagrama} \\ % \mbox{Clases de conjugación}&
               3=1+1+1   &  (1,1,1) & \ydiagram{1,1,1} \quad\\ % (1)
-             \\ 3=2+1   &   (2,1)  &\ydiagram{2,1} \\ %\\(12)
-             \\ 3=3     &   (3)    &\ydiagram{3} %\\(123)
+              \\ 3=2+1   &   (2,1)  &\ydiagram{2,1} \\ %\\(12)
+              \\ 3=3     &   (3)    &\ydiagram{3} %\\(123)
             \end{array}
           \end{equation*}
-        \end{center}
+          % \end{center}
+        \end{minipage}
       \end{block}
      
       \begin{block}{$\lambda$-tablero}
-     %   \begin{scriptsize}
+        % \begin{scriptsize}
+        Un $\lambda$-tablero es:
+        
           Estos son todos los tableros correspondientes a la
           partición $\lambda=(2,1)$:
           \begin{center}
@@ -189,7 +200,7 @@
       \end{block}
 
       \begin{block}{Tablero estándar}
-        Un \textit{tablero estándar (Young)} es $\lambda$-tablero cuyas
+        Un \alert{tablero estándar (Young)} es $\lambda$-tablero cuyas
         entradas son crecientes en cada renglón y en cada columna.
         Los únicos tableros estándar para $\lambda=(2,1)$ son:
         \begin{center}
@@ -237,7 +248,7 @@
       \end{block}
 
       \begin{block}{Politabloides}
-        Si $t$ es un tablero, entonces el \textit{politabloide} asociado es
+        Si $t$ es un tablero, entonces el \alert{politabloide} asociado es
         $$e_{t}=\sum_{\pi\in C_{t}}\sgn(\pi)\pi\{t\}.$$
         \begin{center} Ejemplo:\quad $t=$
           \ytableausetup{mathmode, boxsize=1em}
@@ -254,7 +265,7 @@
 
       \begin{block}{Módulo de Specht $S^{\lambda}$}
         % Para cualquier partición $\lambda$, el correspondiente
-        % \textit{módulo de Specht}, denotado $S^{\lambda}$, es el
+        % \alert{módulo de Specht}, denotado $S^{\lambda}$, es el
         % módulo generado por los politabloides $e_{t}$, donde $t$ es
         % tomado sobre todos los tableros de forma $\lambda$.
         Sea $\lambda$ cualquier partición. El conjunto $\{e_{t}:t
@@ -283,7 +294,7 @@
       %     \ytableaushort{123} 
       %   \end{center}
       %   El politabloide está fijo por $S_{3}$, así que $S^{(3)}$ es la
-      %   \textit{representación trivial}.
+      %   \alert{representación trivial}.
         
       %   Sea $\lambda=(1^{3})=(1,1,1)$. Sea
       %   \begin{center}$t=$
@@ -299,7 +310,7 @@
       %   una permutación par, o $e_{t}=-e_{t^{'}}$ su $t^{'}$ es
       %   obtenida de $t$ mediante una permutación impar. Tenemos $\pi
       %   e_{t}=e_{\pi t}=\sgn(\pi)e_{t}$. Así que $S^{(1^{3})}$ es la
-      %   \textit{representación signo}.
+      %   \alert{representación signo}.
         
       %    Ahora sea $\lambda=(2,1)$, $\{t_{i}\}$ denota el $\lambda$-tabloide
       %    con $i$ en el segundo renglón, vemos que los politabloides tienen la
@@ -317,10 +328,10 @@
       %    $S^{\lambda}$ es generado por los elementos de la forma
       %    $\boldsymbol{e_{i}}-\boldsymbol{e_{j}}$, y se sigue que
       %    $$S^{(2,1)}=\{c_{1}\boldsymbol{e_{1}}+c_{2}\boldsymbol{e_{2}}+c_{3}\boldsymbol{e_{3}}|c_{1}+c_{2}+c_{3}\}$$ 
-      %    Esta es la \textit{representación estándar}. 
+      %    Esta es la \alert{representación estándar}. 
       %  \end{block}
       \begin{block}{Gráfica de emparejamiento}
-        Se define la \emph{gráfica $M(G)$ de emparejamiento} de la gráfica
+        Se define la \alert{gráfica $M(G)$ de emparejamiento} de la gráfica
         simple $G$ como la gráfica cuyos vértices son las aristas de
         $G$ y dos vértices son adyacentes si las correspondientes
         aristas son ajenas. Tenemos especial interés en la gráficas
@@ -330,8 +341,8 @@
 
       \begin{block}{Gráfica de Clanes}
         \begin{itemize}
-        \item Un \textit{clan} de una grafica $G$ es una subgráfica completa maximal. 
-        \item La \textit{gráfica de clanes $K(G)$} de una grafica G es la gráfica de intersección de
+        \item Un \alert{clan} de una grafica $G$ es una subgráfica completa maximal. 
+        \item La \alert{gráfica de clanes $K(G)$} de una grafica G es la gráfica de intersección de
           la familia de clanes de $G$.   
         \end{itemize}
 
@@ -391,7 +402,7 @@
       \end{block}
 
       \begin{block}{Diagrama auto-conjugado}
-        Sea $\lambda=(4,2,1)$, el \textit{auto-conjugado de $\lambda$} 
+        Sea $\lambda=(4,2,1)$, el \alert{auto-conjugado de $\lambda$} 
         es $\lambda^{'}=(3,2,1,1)$
         \begin{center}
           \ytableausetup{notabloids} 
