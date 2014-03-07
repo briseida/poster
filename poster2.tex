@@ -249,18 +249,25 @@
       \end{block}
 
       \begin{block}{Politabloides}
-        Si $t$ es un tablero, entonces el \alert{politabloide} asociado es
+        \begin{minipage}{0.43\linewidth}
+          Si $t$ es un tablero, entonces el \alert{politabloide}
+          asociado es
         $$e_{t}=\sum_{\pi\in C_{t}}\sgn(\pi)\pi\{t\}.$$
-        \begin{center} Ejemplo:\quad $t=$
+      \end{minipage}
+      \hspace{\fill}
+      \begin{minipage}{0.53\linewidth}
+        Ejemplo:
+
+        \begin{center}
+          \quad $t=$
           \begin{ytableau}
             1 & 2 \\
             3
-          \end{ytableau}\quad
-          $e_{t}=$
-          \ytableausetup{mathmode, boxsize=1em,tabloids}
-          \ytableaushort{12,3}
-          $-$ \ytableaushort{32,1}
+          \end{ytableau}\qquad
+          $e_{t}=$ \ytableausetup{mathmode, boxsize=1em,tabloids}
+          \ytableaushort{12,3} $-$ \ytableaushort{32,1}
         \end{center}
+      \end{minipage}
       \end{block}
 
       \begin{block}{Módulo de Specht $S^{\lambda}$}
