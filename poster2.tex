@@ -557,9 +557,10 @@
 \begin{block}{}
   En~\cite{chessboard-graphs} se demuestra que $G_{n}$ y $K(G_{n})$
   son homotópicas para $n=8$. Esto implica que
-  \begin{equation*}
+  \begin{equation}
+    \label{ecuacion}
     \widetilde H_{k-1}(G_{n};\mathbb{C})\cong \widetilde H_{k-1}(K(G_{n});\mathbb{C})
-  \end{equation*}
+  \end{equation}
   para tales valores de $n$, pero el isomorfismo es de espacios
   vectoriales. En la tesis de licenciatura nos preguntamos si también
   se da el isomorfismo entre tales espacios \alert{como $S_{n}$-módulos}.
@@ -574,7 +575,10 @@
 
   \vfill
 
-  \begin{block}{Complejo de cadenas para $\boldsymbol{K(G_{6})}$}
+  \begin{block}{}
+    Los cálculos necesarios para calcular la descomposición en
+    irreducibles de $\widetilde H_{k-1}(K(G_{6});\mathbb{C})$ se esbozan
+    en el siguiente diagrama:
     \[
     \begin{CD}
       C_{2}(K(G_{6})) @>{\partial_{2}}>> C_{1}(K(G_{6})) @>{\partial_{1}}>> C_{0}(K(G_{6})) @>{\varepsilon}>> \mathbb{C}\\
@@ -584,6 +588,9 @@
       \mathbb{C} \oplus S^{(4,2)}\oplus S^{(2,2,2)} @>{\widehat \varepsilon}>>  \mathbb{C}
     \end{CD}
     \]
+    Finalmente, obtuvimos que: $\widetilde
+    H_{1}(K(G_{6});\mathbb{C})\cong_{S_{6}}=S^{\ydiagram{3,2,1}}$, es
+    decir, el isomorfismo~\ref{ecuacion} es de $S_{6}$ módulos.
   \end{block}
 \end{frame}
 
