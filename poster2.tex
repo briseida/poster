@@ -13,7 +13,9 @@
 \usepackage{tikz}
 \usepackage{tkz-graph}
 \usepackage{tkz-berge}
+
 \usepackage{ytableau}
+\ytableausetup{mathmode, boxsize=1.2em,aligntableaux = center}
 
 \renewcommand{\VertexLineWidth}{2pt}
 \renewcommand{\VertexSmallMinSize}{8pt}
@@ -152,8 +154,6 @@
           Notación: $\lambda\vdash n$.
         \end{minipage}
         \begin{minipage}{0.48\linewidth}
-          \ytableausetup{mathmode, boxsize=1em}
-          % \begin{center}
           \begin{equation*}
             \begin{array}{cccc}
               & \lambda  &\mbox{Diagrama} \\ % \mbox{Clases de conjugación}&
@@ -162,7 +162,6 @@
               \\ 3=3     &   (3)    &\ydiagram{3} %\\(123)
             \end{array}
           \end{equation*}
-          % \end{center}
         \end{minipage}
       \end{block}
      
@@ -224,7 +223,6 @@
         coloca el número $\sigma(i)$ en la caja donde $t$ coloca a
         $i$. Por ejemplo:
         \begin{equation*}(123)(45)\,
-          \ytableausetup{mathmode, boxsize=1.2em,aligntableaux = center}
           \begin{ytableau}
             1 & 2 & 4 & 5 \\
             3 & 6\\
@@ -242,7 +240,6 @@
       \begin{block}{Grupo columna $C_{t}$}
         El \alert{grupo columna} es:
         \begin{center}$t=$
-          \ytableausetup{mathmode,boxsize=1em}  
           \begin{ytableau}
             4 & 1 & 2\\
             3 & 5
@@ -255,7 +252,6 @@
         Si $t$ es un tablero, entonces el \alert{politabloide} asociado es
         $$e_{t}=\sum_{\pi\in C_{t}}\sgn(\pi)\pi\{t\}.$$
         \begin{center} Ejemplo:\quad $t=$
-          \ytableausetup{mathmode, boxsize=1em}
           \begin{ytableau}
             1 & 2 \\
             3
