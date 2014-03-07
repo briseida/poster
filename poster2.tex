@@ -142,12 +142,14 @@
 
       \begin{block}{Partición y Diagramas}
         \begin{minipage}{0.48\linewidth}
-          Una partición de $n$ es:
+          Una \alert{partición} de $n$ es:
 
           A cada partición le corresponde un \alert{diagrama de
             Young}, el cual es:
           
           El número $3$ tiene tres particiones:
+
+          Notación: $\lambda\vdash n$.
         \end{minipage}
         \begin{minipage}{0.48\linewidth}
           \ytableausetup{mathmode, boxsize=1em}
@@ -200,7 +202,7 @@
       \end{block}
 
       \begin{block}{Tablero estándar}
-        Un \alert{tablero estándar (Young)} es $\lambda$-tablero cuyas
+        Un \alert{tablero estándar (Young)} es un $\lambda$-tablero cuyas
         entradas son crecientes en cada renglón y en cada columna.
         Los únicos tableros estándar para $\lambda=(2,1)$ son:
         \begin{center}
@@ -216,10 +218,11 @@
       \end{block}
 
       \begin{block}{Acción de $S_{n}$ en los tableros}
-        La acción de $S_{n}$ en el conjunto de tableros de Young es de
-        la siguiente forma: para un tablero $t$ de tamaño $n$ y una permutación $\sigma\in
-        S_{n}$ el tablero $\sigma t$ es el tablero que coloca el número $\pi(i)$
-        en la caja donde $t$ coloca a $i$. Por ejemplo: 
+        Tenemos una acción de $S_{n}$ en el conjunto de
+        $\lambda$-tableros $t$, donde $\lambda\vdash n$.  Dada
+        $\sigma\in S_{n}$ el tablero $\sigma\cdot t$ es el tablero que
+        coloca el número $\sigma(i)$ en la caja donde $t$ coloca a
+        $i$. Por ejemplo:
         \begin{center}$(123)(45)$
           \ytableausetup{mathmode, boxsize=1em}
           \begin{ytableau}
@@ -237,6 +240,7 @@
       \end{block}
 
       \begin{block}{Grupo columna $C_{t}$}
+        El \alert{grupo columna} es:
         \begin{center}$t=$
           \ytableausetup{mathmode,boxsize=1em}  
           \begin{ytableau}
