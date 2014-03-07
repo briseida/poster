@@ -142,7 +142,7 @@
         \end{itemize}
       \end{block}
 
-      \begin{block}{Partición y Diagramas}
+      \begin{block}{Partición y diagramas}
         \begin{minipage}{0.5\linewidth}
           Una \alert{partición} de un entero positivo $n$ es una secuencia de
           enteros positivos
@@ -304,6 +304,23 @@
          forman una lista completa de representaciones irreducibles de
          $S_{n}$.
      \end{block}
+
+     \begin{block}{Gráfica de emparejamiento}
+       Se define la \alert{gráfica $M(G)$ de emparejamiento} de la gráfica
+       simple $G$ como la gráfica cuyos vértices son las aristas de
+       $G$ y dos vértices son adyacentes si las correspondientes
+       aristas son ajenas. Tenemos especial interés en la gráficas
+       $G_{n}=M(K_{n})$, donde $K_{n}$ es una gráfica completa de $n$ vértices.
+     \end{block}
+     
+     \begin{block}{Gráfica de clanes}
+       \begin{itemize}
+       \item Un \alert{clan} de una gráfica $G$ es una subgráfica completa maximal. 
+       \item La \alert{gráfica de clanes $K(G)$} de una gráfica G es la gráfica de intersección de
+         la familia de clanes de $G$.   
+       \end{itemize}
+     \end{block}
+      
     \end{column}
 
     \begin{column}{0.5\textwidth}
@@ -356,22 +373,6 @@
       %    $$S^{(2,1)}=\{c_{1}\boldsymbol{e_{1}}+c_{2}\boldsymbol{e_{2}}+c_{3}\boldsymbol{e_{3}}|c_{1}+c_{2}+c_{3}\}$$ 
       %    Esta es la \alert{representación estándar}. 
       %  \end{block}
-      \begin{block}{Gráfica de emparejamiento}
-        Se define la \alert{gráfica $M(G)$ de emparejamiento} de la gráfica
-        simple $G$ como la gráfica cuyos vértices son las aristas de
-        $G$ y dos vértices son adyacentes si las correspondientes
-        aristas son ajenas. Tenemos especial interés en la gráficas
-        $G_{n}=M(K_{n})$, donde $K_{n}$ es una gráfica completa de $n$ vértices.
-      \end{block}
-
-      \begin{block}{Gráfica de Clanes}
-        \begin{itemize}
-        \item Un \alert{clan} de una gráfica $G$ es una subgráfica completa maximal. 
-        \item La \alert{gráfica de clanes $K(G)$} de una gráfica G es la gráfica de intersección de
-          la familia de clanes de $G$.   
-        \end{itemize}
-      \end{block}
-      
       \begin{block}{Ejemplo}
         \begin{minipage}{0.3\linewidth} 
           \centering
@@ -472,6 +473,15 @@
                \lambda=\lambda^{'}\\d(\lambda)=5-2(2)=1}} S^{\lambda}=S^{(3,1,1)}=S^{\,\ydiagram{3,1,1}}.
          \end{equation*}
        \end{block}
+
+       \begin{block}{Ejemplo, sea $\boldsymbol{n=6}$ y $\boldsymbol{k=2}$,}
+         \ytableausetup{boxsize=0.25em} 
+         \begin{equation*}
+           % \label{eq:6}
+           \widetilde H_{1}(G_{6};\mathbb{C})\cong_{S_{6}}\bigoplus_{\substack{\lambda:\lambda\vdash 6\\
+               \lambda=\lambda^{'}\\d(\lambda)=6-2(2)=2}} S^{\lambda}=S^{(3,2,1)}=S^{\ydiagram{3,2,1}}.
+         \end{equation*}
+       \end{block}
        % \begin{block}{Ejemplo, sea $\boldsymbol{n=5}$ y $\boldsymbol{k=1}$,}
        %    \begin{minipage}{0.48\linewidth}    
        %      \centering
@@ -558,7 +568,7 @@
 
   \vfill
 
-  \begin{block}{Complejo de Cadenas para $\boldsymbol{K(G_{6})}$}
+  \begin{block}{Complejo de cadenas para $\boldsymbol{K(G_{6})}$}
     \[
     \begin{CD}
       C_{2}(K(G_{6})) @>{\partial_{2}}>> C_{1}(K(G_{6})) @>{\partial_{1}}>> C_{0}(K(G_{6})) @>{\varepsilon}>> \mathbb{C}\\
