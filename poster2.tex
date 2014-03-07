@@ -1,6 +1,6 @@
 \documentclass[final,xcolor=svgnames]{beamer}
 \usetheme{RJH}
-\usepackage[orientation=portrait,size=a2,scale=1.4,debug]{beamerposter}
+\usepackage[orientation=portrait,size=a2,scale=1.2,debug]{beamerposter}
 \usepackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
@@ -143,15 +143,18 @@
       \end{block}
 
       \begin{block}{Partición y Diagramas}
-        \begin{minipage}{0.48\linewidth}
-          Una \alert{partición} de $n$ es:
+        \begin{minipage}{0.5\linewidth}
+          Una \alert{partición} de un entero positivo $n$ es una secuencia de
+          enteros positivos
+          $\lambda=(\lambda_{1},\lambda_{2},\ldots,\lambda_{l})$ que satisface
+          $\lambda_{1}\geq\lambda_{2}\geq\cdots\geq\lambda_{l}>0$ y
+          $n=\sum^{m}_{i=1}\lambda_{i}$. Para indicar que  $\lambda$ es una partición de
+          $n$ lo denotamos como $\lambda\vdash n$.
 
-          A cada partición le corresponde un \alert{diagrama de
-            Young}, el cual es:
+          A cada partición le corresponde un \alert{diagrama de Young}.
           
-          El número $3$ tiene tres particiones:
+          Por ejemplo el número $3$ tiene tres particiones:
 
-          Notación: $\lambda\vdash n$.
         \end{minipage}
         \begin{minipage}{0.48\linewidth}
           \begin{equation*}
@@ -163,6 +166,18 @@
             \end{array}
           \end{equation*}
         \end{minipage}
+      \end{block}
+
+      \begin{block}{Conjugado}
+        Sea $\lambda=(4,2,1)$, el \alert{conjugado de $\lambda$} 
+        es $\lambda^{'}=(3,2,1,1)$ (pues .....)
+        \begin{equation*}
+          \ytableausetup{notabloids} 
+          \lambda=\ydiagram{4,2,1} \quad
+          \lambda^{'}=\ydiagram{3,2,1,1}
+        \end{equation*}
+        $d(\lambda)$ es el número de cajas en la diagonal de el
+        $\lambda$-tablero. En este caso $d(\lambda)=2$.
       \end{block}
      
       \begin{block}{$\lambda$-tablero}
@@ -237,45 +252,47 @@
         \end{equation*}
       \end{block}
 
-      \begin{block}{Grupo columna $C_{t}$}
-        El \alert{grupo columna} es:
-        \begin{center}$t=$
-          \begin{ytableau}
-            4 & 1 & 2\\
-            3 & 5
-          \end{ytableau}\quad
-          $C_{t}=S_{\{3,4\}}\times S_{\{1,5\}}\times S_{\{2\}}$
-        \end{center}
-      \end{block}
+      % \begin{block}{Grupo columna $C_{t}$}
+      %   El \alert{grupo columna} es:
+      %   \begin{center}$t=$
+      %     \begin{ytableau}
+      %       4 & 1 & 2\\
+      %       3 & 5
+      %     \end{ytableau}\quad
+      %     $C_{t}=S_{\{3,4\}}\times S_{\{1,5\}}\times S_{\{2\}}$
+      %   \end{center}
+      % \end{block}
 
-      \begin{block}{Politabloides}
-        \begin{minipage}{0.43\linewidth}
-          Si $t$ es un tablero, entonces el \alert{politabloide}
-          asociado es
-        $$e_{t}=\sum_{\pi\in C_{t}}\sgn(\pi)\pi\{t\}.$$
-      \end{minipage}
-      \hspace{\fill}
-      \begin{minipage}{0.53\linewidth}
-        Ejemplo:
+      % \begin{block}{Politabloides}
+      %   \begin{minipage}{0.43\linewidth}
+      %     Si $t$ es un tablero, entonces el \alert{politabloide}
+      %     asociado es
+      %   $$e_{t}=\sum_{\pi\in C_{t}}\sgn(\pi)\pi\{t\}.$$
+      % \end{minipage}
+      % \hspace{\fill}
+      % \begin{minipage}{0.53\linewidth}
+      %   Ejemplo:
 
-        \begin{center}
-          \quad $t=$
-          \begin{ytableau}
-            1 & 2 \\
-            3
-          \end{ytableau}\qquad
-          $e_{t}=$ \ytableausetup{mathmode, boxsize=1em,tabloids}
-          \ytableaushort{12,3} $-$ \ytableaushort{32,1}
-        \end{center}
-      \end{minipage}
-      \end{block}
+      %   \begin{center}
+      %     \quad $t=$
+      %     \begin{ytableau}
+      %       1 & 2 \\
+      %       3
+      %     \end{ytableau}\qquad
+      %     $e_{t}=$ \ytableausetup{mathmode, boxsize=1em,tabloids}
+      %     \ytableaushort{12,3} $-$ \ytableaushort{32,1}
+      %   \end{center}
+      % \end{minipage}
+      % \end{block}
 
       \begin{block}{Módulo de Specht $S^{\lambda}$}
         Para cualquier partición $\lambda$, el correspondiente
         \alert{módulo de Specht}, denotado $S^{\lambda}$, es el
-        $\mathbb{C}$-espacio vectorial generado por los politabloides
-        $e_{t}$, donde $t$ es tomado sobre todos los tableros de forma
+        $\mathbb{C}$-espacio vectorial generado por elementos llamados
+        politabloides $e_{t}$ (los cuales mapean cada tablero al
+        tablero que fija sus renglones), donde $t$ es tomado sobre todos los tableros de forma
         $\lambda$.
+
         % Sea $\lambda$ cualquier partición. El conjunto $\{e_{t}:t
         % \mbox{ es un }\lambda\mbox{-tablero estándar}\}$
         % forma una base para $S^{\lambda}$ como espacio vectorial
@@ -408,18 +425,6 @@
                   \end{minipage}
       \end{block}
 
-      \begin{block}{Conjugado}
-        Sea $\lambda=(4,2,1)$, el \alert{conjugado de $\lambda$} 
-        es $\lambda^{'}=(3,2,1,1)$ (pues .....)
-        \begin{equation*}
-          \ytableausetup{notabloids} 
-          \lambda=\ydiagram{4,2,1} \quad
-          \lambda^{'}=\ydiagram{3,2,1,1}
-        \end{equation*}
-        $d(\lambda)$ es el número de cajas en la diagonal de el
-        $\lambda$-tablero. En este caso $d(\lambda)=2$.
-      \end{block}
-
       \begin{block}{Complejo simplicial}
         A cada gráfica $G$ se le asocia un espacio topológico por
         medio del complejo simplicial $\Delta(G)$ cuyos simplejos son
@@ -449,24 +454,41 @@
               \lambda=\lambda^{'}\\d(\lambda)=3-2(1)=1}} S^{\lambda}=S^{(2,1)}=S^{\ydiagram{2,1}}.
           \end{equation*}
        \end{block}
-
-       \begin{block}{Ejemplo, sea $\boldsymbol{n=5}$ y $\boldsymbol{k=1}$,}
-          \begin{minipage}{0.48\linewidth}    
-            \centering
-           \begin{equation*}
-             % \label{eq:6}
-             \widetilde H_{0}(G_{5};\mathbb{C})\cong_{S_{5}}\bigoplus_{\substack{\lambda:\lambda\vdash 5\\
-                 \lambda=\lambda^{'}\\d(\lambda)=5-2(1)=3}} S^{\lambda}=0.
-           \end{equation*}
-          \end{minipage}
-          \begin{minipage}{0.5\linewidth}    
-           \ytableausetup{boxsize=0.8em}            
-          % \centering
-           pues solo la partición $\lambda=(3,1,1)=\lambda^{'}$ del
-           correspondiente diagrama \ydiagram{3,1,1}, pero
-           $d(\lambda)=1$.
-         \end{minipage}
+       
+       \begin{block}{Ejemplo, sea $\boldsymbol{n=4}$ y $\boldsymbol{k=1}$,}
+         \ytableausetup{boxsize=0.25em} 
+         \begin{equation*}
+           % \label{eq:6}
+           \widetilde H_{0}(G_{4};\mathbb{C})\cong_{S_{4}}\bigoplus_{\substack{\lambda:\lambda\vdash 4\\
+               \lambda=\lambda^{'}\\d(\lambda)=4-2(1)=2}} S^{\lambda}=S^{(2,2)}=S^{\ydiagram{2,2}}.
+         \end{equation*}
        \end{block}
+
+       \begin{block}{Ejemplo, sea $\boldsymbol{n=5}$ y $\boldsymbol{k=2}$,}
+         \ytableausetup{boxsize=0.25em} 
+         \begin{equation*}
+           % \label{eq:6}
+           \widetilde H_{1}(G_{5};\mathbb{C})\cong_{S_{5}}\bigoplus_{\substack{\lambda:\lambda\vdash 5\\
+               \lambda=\lambda^{'}\\d(\lambda)=5-2(2)=1}} S^{\lambda}=S^{(3,1,1)}=S^{\ydiagram{3,1,1}}.
+         \end{equation*}
+       \end{block}
+       % \begin{block}{Ejemplo, sea $\boldsymbol{n=5}$ y $\boldsymbol{k=1}$,}
+       %    \begin{minipage}{0.48\linewidth}    
+       %      \centering
+       %     \begin{equation*}
+       %       % \label{eq:6}
+       %       \widetilde H_{0}(G_{5};\mathbb{C})\cong_{S_{5}}\bigoplus_{\substack{\lambda:\lambda\vdash 5\\
+       %           \lambda=\lambda^{'}\\d(\lambda)=5-2(1)=3}} S^{\lambda}=0.
+       %     \end{equation*}
+       %    \end{minipage}
+       %    \begin{minipage}{0.5\linewidth}    
+       %     \ytableausetup{boxsize=0.8em}            
+       %    % \centering
+       %     pues solo la partición $\lambda=(3,1,1)=\lambda^{'}$ del
+       %     correspondiente diagrama \ydiagram{3,1,1}, pero
+       %     $d(\lambda)=1$.
+       %   \end{minipage}
+       % \end{block}
       
 \begin{block}{$\boldsymbol{G_6}$ y $\boldsymbol{K(G_6)}$}
   %\begin{minipage}{0.15\linewidth}    
