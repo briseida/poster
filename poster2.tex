@@ -119,32 +119,41 @@
     %   \end{scriptsize}
     % \end{block}
 
-      \begin{block}{Grupo simétrico $S_{n}$}
-    %    \begin{scriptsize}
-          \begin{itemize}
-            \item $(123)(45)\in S_{5}$ tiene la  \textit{estructura cíclica} $(3,2)$. 
-            \item Dos elementos de $S_{n}$ están conjugados si y solo tienen la misma
-          estructura cíclica.
-          \end{itemize}
-     %   \end{scriptsize}
+      % \begin{block}{Grupo simétrico $S_{n}$}
+      %   \begin{itemize}
+      %   \item $(123)(45)\in S_{5}$ tiene la  \textit{estructura cíclica} $(3,2)$. 
+      %   \item Dos elementos de $S_{n}$ están conjugados si y solo tienen la misma
+      %     estructura cíclica.
+      %   \end{itemize}
+      % \end{block}
+      \begin{block}{Representaciones de grupos.}
+        \begin{itemize}
+          \item Si $G$ es un grupo y $V$ es un espacio vectorial sobre
+            $\mathbb{C}$, una \textit{representación lineal} de $G$ en
+            $V$ es un homomorfismo $\rho:G\rightarrow GL(V).$
+          \item Una representación de $G$ en $V$ da origen a una
+            acción lineal de $G$ en $V$, decimos que $V$ es \emph{$G$-módulo.}  
+         \item Un \emph{submódulo} de un $G$-módulo $V$ es un
+           subespacio vectorial $U$ de $V$ tal que $gu \in U$ para todo $g\in G$ y $u\in U$.
+          \item $V$ es \emph{irreducible} si los únicos submódulos de
+            $V$ son $0$ y $V$.
+        \end{itemize}
       \end{block}
 
       \begin{block}{Partición y Diagramas}
-     %   \begin{scriptsize}
-           El número $3$ tiene tres particiones:
-           \ytableausetup{mathmode, boxsize=1em}
-           \begin{center}
-             \begin{equation*}
-             \begin{array}{cccc}
-              \mbox{Clases de conjugación}&  &\lambda &  \mbox{Diagrama} \\
-               (1)        &  3=1+1+1  &  (1,1,1) & \ydiagram{1,1,1} \quad\\
-               \\(12)     &  3=2+1    &   (2,1) &\ydiagram{2,1} \\
-               \\(123)    &   3=3      &   (3)  &\ydiagram{3}
-             \end{array}
-           \end{equation*}
-             \end{center}
-     %      \end{scriptsize}
-         \end{block}
+        El número $3$ tiene tres particiones:
+        \ytableausetup{mathmode, boxsize=1em}
+        \begin{center}
+          \begin{equation*}
+            \begin{array}{cccc}
+                        & \lambda  &\mbox{Diagrama} \\ % \mbox{Clases de conjugación}&
+              3=1+1+1   &  (1,1,1) & \ydiagram{1,1,1} \quad\\ % (1)
+             \\ 3=2+1   &   (2,1)  &\ydiagram{2,1} \\ %\\(12)
+             \\ 3=3     &   (3)    &\ydiagram{3} %\\(123)
+            \end{array}
+          \end{equation*}
+        \end{center}
+      \end{block}
      
       \begin{block}{$\lambda$-tablero}
      %   \begin{scriptsize}
@@ -252,7 +261,12 @@
         \mbox{ es un }\lambda\mbox{-tablero estándar}\}$
         forma una base para $S^{\lambda}$ como espacio vectorial
         sobre $\mathbb{C}$.
-      \end{block}     
+      \end{block} 
+
+       \begin{block}{Teorema}
+       Los módulos de Specht $S^{\lambda}$ para $\lambda\vdash n$ forman
+       una lista completa de representaciones irreducibles de $S_{n}$ sobre $\mathbb{C}$.
+     \end{block}
     \end{column}
 
     \begin{column}{0.5\textwidth}
@@ -305,14 +319,6 @@
       %    $$S^{(2,1)}=\{c_{1}\boldsymbol{e_{1}}+c_{2}\boldsymbol{e_{2}}+c_{3}\boldsymbol{e_{3}}|c_{1}+c_{2}+c_{3}\}$$ 
       %    Esta es la \textit{representación estándar}. 
       %  \end{block}
-
-     \begin{block}{Teorema}
-     %  \begin{scriptsize}         
-         Los módulos de Specht $S^{\lambda}$ para $\lambda\vdash n$ forman
-         una lista completa de representaciones irreducibles de $S_{n}$ sobre $\mathbb{C}$.
-     %  \end{scriptsize}
-      \end{block}
-
       \begin{block}{Gráfica de emparejamiento}
         Se define la \emph{gráfica $M(G)$ de emparejamiento} de la gráfica
         simple $G$ como la gráfica cuyos vértices son las aristas de
@@ -424,7 +430,7 @@
          pues solo la partición $\lambda=(3,1,1)=\lambda^{'}$, pero $d(\lambda)=1$.
        \end{block}
       
-\begin{block}{Gráficas de Emparejamiento y de Clanes.}
+\begin{block}{$\boldsymbol{G_6}$ y $\boldsymbol{K(G_6)}$}
   %\begin{minipage}{0.15\linewidth}    
      %   \begin{center}
      %     \begin{tikzpicture}
@@ -469,18 +475,16 @@
 
   \vfill
 
-  \begin{block}{Blah blah}
-  %  \begin{tiny}
+  \begin{block}{Complejo de Cadenas para $\boldsymbol{K(G_{6})}$}
     \[
     \begin{CD}
-      C_{2}(G_{6}) @>{\partial_{2}}>> C_{1}(G_{6}) @>{\partial_{1}}>> C_{0}(G_{6}) @>{\varepsilon}>> \mathbb{C}\\
+      C_{2}(K(G_{6})) @>{\partial_{2}}>> C_{1}(K(G_{6})) @>{\partial_{1}}>> C_{0}(K(G_{6})) @>{\varepsilon}>> \mathbb{C}\\
       @VVV   @VVV   @VVV   @VVV    \\
-      S^{(4,1,1)}\oplus S^{(3,3)} @>{\widehat\partial_{2}}>>
-      S^{(5,1)}\oplus S^{(4,1,1)}\oplus S^{(4,2)}\oplus S^{(3,3)}\oplus S^{(3,2,1)} @>{\widehat\partial_{1}}>> 
-      \mathbb{C} \oplus S^{(5,1)}\oplus S^{(4,2)} @>{\widehat \varepsilon}>>  \mathbb{C}
+      S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)} @>{\widehat\partial_{2}}>>
+      S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(4,2)}\oplus S^{(2,2,2)}\oplus S^{(3,2,1)} @>{\widehat\partial_{1}}>> 
+      \mathbb{C} \oplus S^{(4,2)}\oplus S^{(2,2,2)} @>{\widehat \varepsilon}>>  \mathbb{C}
     \end{CD}
     \]
-  %  \end{tiny}
   \end{block}
 \end{frame}
 \end{document}
