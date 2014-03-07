@@ -124,9 +124,14 @@
         \end{minipage}
       \end{block}
 
-      \begin{block}{Conjugado}
-        Sea $\lambda=(4,2,1)$, el \alert{conjugado de $\lambda$} 
-        es $\lambda^{'}=(3,2,1,1)$ (pues .....)
+      \begin{block}{}
+        \begin{minipage}{0.4\linewidth}
+        Sea $\lambda=(4,2,1)$, el \alert{conjugado de $\lambda$} es
+        $\lambda^{'}=(3,2,1,1)$, $\lambda^{'}$ se obtiene listando el
+        número de cajas en cada columna del diagrama de Young
+        correspondiente a $\lambda$. 
+        \end{minipage}\qquad
+        \begin{minipage}{0.5\linewidth}
         \begin{equation*}
           \ytableausetup{notabloids} 
           \lambda=\ydiagram{4,2,1} \quad
@@ -134,9 +139,10 @@
         \end{equation*}
         $d(\lambda)$ es el número de cajas en la diagonal de el
         $\lambda$-tablero. En este caso $d(\lambda)=2$.
+        \end{minipage}
       \end{block}
      
-      \begin{block}{$\lambda$-tablero}
+      \begin{block}{}
         \begin{minipage}{0.46\linewidth}
           Si $\lambda\vdash n$, un \alert{$\lambda$-tablero} se
           obtiene llenando las cajas de un diagrama de Young para
@@ -259,14 +265,11 @@
          la familia de clanes de $G$.   
        \end{itemize}
      \end{block}
-      
-    \end{column}
-
-    \begin{column}{0.5\textwidth}
+     
       \begin{block}{Ejemplo}
         \begin{minipage}{0.3\linewidth} 
           \centering
-          \begin{tikzpicture}
+          \begin{tikzpicture}[x=0.7 cm,y=0.7 cm]
             \draw[help lines] (-2,0);% grid (0,2);
             \GraphInit[vstyle=Classic]
             \Vertex[x=-2,y=0,Math,LabelOut,Lpos=180]{2}
@@ -285,7 +288,7 @@
         \end{minipage}
         \begin{minipage}{0.3\linewidth}    
           \centering
-          \begin{tikzpicture}
+          \begin{tikzpicture}[x=0.7 cm,y=0.7 cm]
               \draw[help lines] (-2,0);% grid (0,2);
               \GraphInit[vstyle=Classic]
               \Vertex[x=-2,y=2,Math,LabelOut,Lpos=90]{12}
@@ -303,7 +306,7 @@
           \end{minipage}
         \begin{minipage}{0.3\linewidth}    
           \centering
-            \begin{tikzpicture}
+            \begin{tikzpicture}[x=0.7 cm,y=0.7 cm]
               \draw[help lines] (-2,0);% grid (2,0);
               \GraphInit[vstyle=Classic]
               \Vertex[x=-2,y=0,Math,LabelOut,Lpos=-90]{12,34}
@@ -314,7 +317,9 @@
             $K(G_{4})$
           \end{minipage}
       \end{block}
+    \end{column}
 
+    \begin{column}{0.5\textwidth}
       \begin{block}{Complejo simplicial}
         A cada gráfica $G$ se le asocia un espacio topológico por
         medio del complejo simplicial $\Delta(G)$ cuyos simplejos son
@@ -359,46 +364,63 @@
         Sea $n=6$ y $k=2$,
       \begin{equation*}
         \widetilde H_{1}(G_{6};\mathbb{C})\cong_{S_{6}}\bigoplus_{\substack{\lambda:\lambda\vdash 6\\
-            \lambda=\lambda^{'}\\d(\lambda)=6-2(2)=2}} S^{\lambda}=S^{(3,2,1)}=S^{\ydiagram{3,2,1}}.
+            \lambda=\lambda^{'}\\d(\lambda)=6-2(2)=2}} S^{\lambda}=S^{(3,2,1)}=S^{\,\ydiagram{3,2,1}}.
       \end{equation*}
     \end{block}
       
 \begin{block}{$\boldsymbol{G_6}$ y $\boldsymbol{K(G_6)}$}
-   \begin{minipage}{0.53\linewidth}    
-    \centering
-    \begin{tikzpicture}
-      \GraphInit[vstyle=Shade]
-      \Vertex[x=0,y=0,Math]{a}
-      \grEmptyCycle[RA=1.3,prefix=b]{6}
-      \grEmptyCycle[RA=2.6,prefix=c]{24}
-      \EdgeFromOneToAll{a}{b}{}{6}
-      \EdgeInGraphMod*{b}{6}{1}{0}{2}
-      \EdgeInGraphMod*{c}{24}{1}{0}{2}
-      \EdgeFromOneToSeq{b}{c}{1}{2}{5}
-      \EdgeFromOneToSeq{b}{c}{2}{6}{9}
-      \EdgeFromOneToSeq{b}{c}{3}{10}{13}
-      \EdgeFromOneToSeq{b}{c}{4}{14}{17}
-      \EdgeFromOneToSeq{b}{c}{5}{18}{21}
-      \EdgeFromOneToSeq{b}{c}{0}{22}{23}
-      \EdgeFromOneToSeq{b}{c}{0}{0}{1}
-    \end{tikzpicture}
+   \begin{minipage}{0.46\linewidth}    
+    %\centering
+     
+     \begin{center}
+       \begin{tikzpicture}
+         \GraphInit[vstyle=Shade] \Vertex[x=0,y=0,Math]{a}
+         \grEmptyCycle[RA=1.3,prefix=b]{6}
+         \grEmptyCycle[RA=2.6,prefix=c]{24}
+         \EdgeFromOneToAll{a}{b}{}{6} \EdgeInGraphMod*{b}{6}{1}{0}{2}
+         \EdgeInGraphMod*{c}{24}{1}{0}{2}
+         \EdgeFromOneToSeq{b}{c}{1}{2}{5}
+         \EdgeFromOneToSeq{b}{c}{2}{6}{9}
+         \EdgeFromOneToSeq{b}{c}{3}{10}{13}
+         \EdgeFromOneToSeq{b}{c}{4}{14}{17}
+         \EdgeFromOneToSeq{b}{c}{5}{18}{21}
+         \EdgeFromOneToSeq{b}{c}{0}{22}{23}
+         \EdgeFromOneToSeq{b}{c}{0}{0}{1}
+       \end{tikzpicture}
 
-    $G_{6}$
-  \end{minipage}
-  \begin{minipage}{0.4\linewidth}  
-    \centering   
-    \begin{tikzpicture}
-      \GraphInit[vstyle=Normal]
-      % \SetVertexNoLabel
-      \grCycle[RA=1,prefix=a,rotation=-90]{3}
-      \grEmptyCycle[RA=2.6,prefix=b,rotation=-10]{12}
-      \EdgeInGraphMod*{b}{12}{1}{0}{2}
-      \EdgeFromOneToSeq{a}{b}{1}{0}{3}
-      \EdgeFromOneToSeq{a}{b}{2}{4}{7}
-      \EdgeFromOneToSeq{a}{b}{0}{8}{11}
-    \end{tikzpicture}
+       $G_{6}$
+     \end{center}
 
-    $K(G_{6})$
+    El complejo simplicial $\Delta(G_{6})$ contiene simplejos de
+    dimensión $0$, $1$ y $2$.
+
+    Los $0$-simplejos de $G_{6}$ son las  aristas de $K_{6}$ y los
+    representamos como vértices, los $1$-simplejos son las aristas de $G_{6}$ y
+    los $2$-simplejos son los triángulos que aparecen en la gráfica $G_{6}$.      
+  \end{minipage}\qquad
+  \begin{minipage}{0.46\linewidth}  
+    %\centering   
+    \begin{center}
+      \begin{tikzpicture}
+        \GraphInit[vstyle=Normal]
+        % \SetVertexNoLabel
+        \grCycle[RA=1,prefix=a,rotation=-90]{3}
+        \grEmptyCycle[RA=2.6,prefix=b,rotation=-10]{12}
+        \EdgeInGraphMod*{b}{12}{1}{0}{2}
+        \EdgeFromOneToSeq{a}{b}{1}{0}{3}
+        \EdgeFromOneToSeq{a}{b}{2}{4}{7}
+        \EdgeFromOneToSeq{a}{b}{0}{8}{11}
+      \end{tikzpicture}
+
+      $K(G_{6})$
+    \end{center}
+
+    El complejo simplicial $\Delta(K(G_{6}))$ también contiene simplejos de
+    dimensión $0$, $1$ y $2$.
+
+    Ahora los $0$-simplejos de $K(G_{6})$ son los triángulos de $G_{6}$ y los
+    representamos como vértices, los $1$-simplejos son las aristas de $K(G_{6})$ y
+    los $2$-simplejos son los triángulos que aparecen en la gráfica $K(G_{6})$.  
   \end{minipage}
 \end{block}
 
@@ -437,8 +459,8 @@
     \end{CD}
     \]
     Finalmente, obtuvimos que: $\widetilde
-    H_{1}(K(G_{6});\mathbb{C})\cong_{S_{6}}=S^{\ydiagram{3,2,1}}$, es
-    decir, el isomorfismo~\ref{ecuacion} es de $S_{6}$ módulos.
+    H_{1}(K(G_{6});\mathbb{C})\cong_{S_{6}}=S^{\,\ydiagram{3,2,1}}$, es
+    decir, el isomorfismo~\eqref{ecuacion} es de $S_{6}$-módulos.
   \end{block}
 \end{frame}
 
