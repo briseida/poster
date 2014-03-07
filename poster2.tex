@@ -462,22 +462,16 @@
     $G_{6}$
   \end{minipage}
   \begin{minipage}{0.4\linewidth}  
-    \centering          
+    \centering   
     \begin{tikzpicture}
       \GraphInit[vstyle=Normal]
-      \SetVertexNoLabel
-      \Vertex[x=0,y=0,Math]{a}
-      \grEmptyCycle[RA=1.3,prefix=b]{6}
-      \grEmptyCycle[RA=2.6,prefix=c,rotation=-30]{12}
-      \EdgeFromOneToAll{a}{b}{}{6}
-      \EdgeInGraphMod*{b}{6}{1}{0}{2}
-      \EdgeInGraphMod*{c}{12}{1}{0}{2}
-      \EdgeFromOneToSeq{b}{c}{0}{0}{1}
-      \EdgeFromOneToSeq{b}{c}{1}{2}{3}
-      \EdgeFromOneToSeq{b}{c}{2}{4}{5}
-      \EdgeFromOneToSeq{b}{c}{3}{6}{7}
-      \EdgeFromOneToSeq{b}{c}{4}{8}{9}
-      \EdgeFromOneToSeq{b}{c}{5}{10}{11}
+      % \SetVertexNoLabel
+      \grCycle[RA=1,prefix=a,rotation=-90]{3}
+      \grEmptyCycle[RA=2.6,prefix=b,rotation=-10]{12}
+      \EdgeInGraphMod*{b}{12}{1}{0}{2}
+      \EdgeFromOneToSeq{a}{b}{1}{0}{3}
+      \EdgeFromOneToSeq{a}{b}{2}{4}{7}
+      \EdgeFromOneToSeq{a}{b}{0}{8}{11}
     \end{tikzpicture}
 
     $K(G_{6})$
