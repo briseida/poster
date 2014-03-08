@@ -1,6 +1,6 @@
 \documentclass[final,xcolor=svgnames]{beamer}
 \usetheme{RJH}
-\usepackage[orientation=portrait,size=a2,scale=1.2,debug]{beamerposter}
+\usepackage[orientation=portrait,size=a0,scale=1.32,debug]{beamerposter}
 \usepackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
@@ -32,7 +32,9 @@
     Representaciones del grupo simétrico en homologías}
 \author{%
   Briseida Trejo Escamilla\\[15pt]
-  \textsl{XXIX Coloquio Víctor Neumann-Lara de Teoría de las Gráficas, Combinatoria y sus Aplicaciones}}
+  \textsl{XXIX Coloquio Víctor Neumann-Lara de Teoría de las Gráficas,
+    Combinatoria y sus Aplicaciones \qquad\LARGE \textbf{UAEH}}}
+\institute{UAEH}
 \footer{\texttt{btbrisi@hotmail.com}}
 
 \begin{document}
@@ -41,7 +43,7 @@
     \begin{minipage}{0.15\linewidth}
       \centering
       \begin{tikzpicture}[rotate=90]
-        \grPetersen[RA=2,RB=1]
+        \grPetersen[RA=3.5,RB=1.7]
       \end{tikzpicture}
 
       $G_{5}$
@@ -65,9 +67,9 @@
       \centering
       \begin{tikzpicture}
 %        \GraphInit[vstyle=Hasse]
-        \grEmptyCycle[RA=0.4,rotation=-90]{5}
-        \grEmptyCycle[RA=1.2,prefix=w,rotation=-90]{5}
-        \grCycle[RA=2,prefix=z,rotation=90]{5}
+        \grEmptyCycle[RA=0.9,rotation=-90]{5}
+        \grEmptyCycle[RA=1.7,prefix=w,rotation=-90]{5}
+        \grCycle[RA=3.5,prefix=z,rotation=90]{5}
         \EdgeInGraphMod{a}{5}{2}
         \EdgeMod{a}{w}{5}{1}
         \EdgeMod{a}{w}{5}{-1}
@@ -124,7 +126,7 @@
         \end{minipage}
       \end{block}
 
-      \begin{block}{}
+      \begin{block}{Conjugado}
         \begin{minipage}{0.4\linewidth}
         Sea $\lambda=(4,2,1)$, el \alert{conjugado de $\lambda$} es
         $\lambda^{'}=(3,2,1,1)$, $\lambda^{'}$ se obtiene listando el
@@ -142,7 +144,7 @@
         \end{minipage}
       \end{block}
      
-      \begin{block}{}
+      \begin{block}{$\lambda$-tablero}
         \begin{minipage}{0.46\linewidth}
           Si $\lambda\vdash n$, un \alert{$\lambda$-tablero} se
           obtiene llenando las cajas de un diagrama de Young para
@@ -209,7 +211,7 @@
           $\lambda$-tableros $t$, donde $\lambda\vdash n$.  Dada
           $\sigma\in S_{n}$ el tablero $\sigma\cdot t$ es el tablero
           que coloca el número $\sigma(i)$ en la caja donde $t$ coloca
-          a $i$. Por ejemplo:
+          a $i$.  Por ejemplo:
         \end{minipage}
         %\hspace{\fill}
         \begin{minipage}{0.42\linewidth}
@@ -269,7 +271,7 @@
       \begin{block}{Ejemplo}
         \begin{minipage}{0.3\linewidth} 
           \centering
-          \begin{tikzpicture}[x=0.7 cm,y=0.7 cm]
+          \begin{tikzpicture}[x=3 cm,y=3 cm]
             \draw[help lines] (-2,0);% grid (0,2);
             \GraphInit[vstyle=Classic]
             \Vertex[x=-2,y=0,Math,LabelOut,Lpos=180]{2}
@@ -287,8 +289,8 @@
           $K_{4}$
         \end{minipage}
         \begin{minipage}{0.3\linewidth}    
-          \centering
-          \begin{tikzpicture}[x=0.7 cm,y=0.7 cm]
+          \centering 
+          \begin{tikzpicture}[x=3 cm,y=3 cm]
               \draw[help lines] (-2,0);% grid (0,2);
               \GraphInit[vstyle=Classic]
               \Vertex[x=-2,y=2,Math,LabelOut,Lpos=90]{12}
@@ -306,7 +308,7 @@
           \end{minipage}
         \begin{minipage}{0.3\linewidth}    
           \centering
-            \begin{tikzpicture}[x=0.7 cm,y=0.7 cm]
+            \begin{tikzpicture}[x=2 cm,y=3 cm]
               \draw[help lines] (-2,0);% grid (2,0);
               \GraphInit[vstyle=Classic]
               \Vertex[x=-2,y=0,Math,LabelOut,Lpos=-90]{12,34}
@@ -368,15 +370,13 @@
       \end{equation*}
     \end{block}
       
-\begin{block}{$\boldsymbol{G_6}$ y $\boldsymbol{K(G_6)}$}
-   \begin{minipage}{0.46\linewidth}    
-    %\centering
-     
-     \begin{center}
+\begin{block}{}
+   \begin{minipage}{0.46\linewidth} \quad
+       \begin{center}
        \begin{tikzpicture}
          \GraphInit[vstyle=Shade] \Vertex[x=0,y=0,Math]{a}
-         \grEmptyCycle[RA=1.3,prefix=b]{6}
-         \grEmptyCycle[RA=2.6,prefix=c]{24}
+         \grEmptyCycle[RA=2.5,prefix=b]{6}
+         \grEmptyCycle[RA=5.2,prefix=c]{24}
          \EdgeFromOneToAll{a}{b}{}{6} \EdgeInGraphMod*{b}{6}{1}{0}{2}
          \EdgeInGraphMod*{c}{24}{1}{0}{2}
          \EdgeFromOneToSeq{b}{c}{1}{2}{5}
@@ -388,41 +388,51 @@
          \EdgeFromOneToSeq{b}{c}{0}{0}{1}
        \end{tikzpicture}
 
-       $G_{6}$
+       \alert{$\boldsymbol{G_{6}}$}
      \end{center}
+   \end{minipage}\qquad
+   \begin{minipage}{0.46\linewidth} 
+     El complejo simplicial $\Delta(G_{6})$ contiene simplejos de
+     dimensión $0$, $1$ y $2$.
+     
+     Los $0$-simplejos de $G_{6}$ son las  aristas de $K_{6}$ y los
+     representamos como vértices, los $1$-simplejos son las aristas de $G_{6}$ y
+     los $2$-simplejos son los triángulos que aparecen en la gráfica $G_{6}$.      
+   \end{minipage}
 
-    El complejo simplicial $\Delta(G_{6})$ contiene simplejos de
-    dimensión $0$, $1$ y $2$.
+   \begin{minipage}{0.5\linewidth}\qquad
 
-    Los $0$-simplejos de $G_{6}$ son las  aristas de $K_{6}$ y los
-    representamos como vértices, los $1$-simplejos son las aristas de $G_{6}$ y
-    los $2$-simplejos son los triángulos que aparecen en la gráfica $G_{6}$.      
-  \end{minipage}\qquad
-  \begin{minipage}{0.46\linewidth}  
-    %\centering   
-    \begin{center}
-      \begin{tikzpicture}
-        \GraphInit[vstyle=Normal]
-        % \SetVertexNoLabel
-        \grCycle[RA=1,prefix=a,rotation=-90]{3}
-        \grEmptyCycle[RA=2.6,prefix=b,rotation=-10]{12}
-        \EdgeInGraphMod*{b}{12}{1}{0}{2}
-        \EdgeFromOneToSeq{a}{b}{1}{0}{3}
-        \EdgeFromOneToSeq{a}{b}{2}{4}{7}
-        \EdgeFromOneToSeq{a}{b}{0}{8}{11}
-      \end{tikzpicture}
+     El complejo simplicial $\Delta(K(G_{6}))$ también contiene simplejos de
+     dimensión $0$, $1$ y $2$.
 
-      $K(G_{6})$
-    \end{center}
+     Ahora los $0$-simplejos de $K(G_{6})$ son los triángulos de $G_{6}$ y los
+     representamos como vértices, los $1$-simplejos son las aristas de $K(G_{6})$ y
+     los $2$-simplejos son los triángulos de la gráfica $K(G_{6})$. 
+   \end{minipage}\qquad
+   \begin{minipage}{0.43\linewidth} 
+      \begin{center}
+       \begin{tikzpicture}
+         \GraphInit[vstyle=Normal]
+         \grCycle[RA=2,prefix=a,rotation=-90]{3}
+         \grEmptyCycle[RA=5.2,prefix=b,rotation=-10]{12}
+         \EdgeInGraphMod*{b}{12}{1}{0}{2}
+         \EdgeFromOneToSeq{a}{b}{1}{0}{3}
+         \EdgeFromOneToSeq{a}{b}{2}{4}{7}
+         \EdgeFromOneToSeq{a}{b}{0}{8}{11}
+       \end{tikzpicture}
+       
+      \alert{$\boldsymbol{K(G_{6})}$}
+     \end{center}
+   \end{minipage}
 
-    El complejo simplicial $\Delta(K(G_{6}))$ también contiene simplejos de
-    dimensión $0$, $1$ y $2$.
-
-    Ahora los $0$-simplejos de $K(G_{6})$ son los triángulos de $G_{6}$ y los
-    representamos como vértices, los $1$-simplejos son las aristas de $K(G_{6})$ y
-    los $2$-simplejos son los triángulos que aparecen en la gráfica $K(G_{6})$.  
-  \end{minipage}
-\end{block}
+   \begin{minipage}{1.0\linewidth}\qquad
+     
+     \begin{small}
+       $G_6$ y $K(G_6)$ son gráficas isomorfas, pero no existe un
+       isomorfismo que preserve la acción natural de $S_6.$
+     \end{small}
+   \end{minipage}
+ \end{block}
 
 \begin{block}{}
   En~\cite{chessboard-graphs} se demuestra que $G_{n}$ y $K(G_{n})$
@@ -452,14 +462,15 @@
     \[
     \begin{CD}
       C_{2}(K(G_{6})) @>{\partial_{2}}>> C_{1}(K(G_{6})) @>{\partial_{1}}>> C_{0}(K(G_{6})) @>{\varepsilon}>> \mathbb{C}\\
-      @VVV   @VVV   @VVV   @VVV    \\
+     % @VVV   @VVV   @VVV   @VVV    \\
+      \cong @VVV{\cong}   @VVV{\cong}   @VVV   @VVV    \\
       S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)} @>{\widehat\partial_{2}}>>
       S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(4,2)}\oplus S^{(2,2,2)}\oplus S^{(3,2,1)} @>{\widehat\partial_{1}}>> 
       \mathbb{C} \oplus S^{(4,2)}\oplus S^{(2,2,2)} @>{\widehat \varepsilon}>>  \mathbb{C}
     \end{CD}
     \]
     Finalmente, obtuvimos que: $\widetilde
-    H_{1}(K(G_{6});\mathbb{C})\cong_{S_{6}}=S^{\,\ydiagram{3,2,1}}$, es
+    H_{1}(K(G_{6});\mathbb{C})\cong_{S_{6}}S^{\,\ydiagram{3,2,1}}$, es
     decir, el isomorfismo~\eqref{ecuacion} es de $S_{6}$-módulos.
   \end{block}
 \end{frame}
